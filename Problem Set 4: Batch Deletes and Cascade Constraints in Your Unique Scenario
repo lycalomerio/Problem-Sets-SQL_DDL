@@ -1,0 +1,10 @@
+DELETE FROM MANGA 
+WHERE manga_price = 875;
+
+DROP TABLE MANGA
+CASCADE CONSTRAINTS;
+
+
+#REFLECTION:
+CASCADE CONSTRAINTS while deleting tables, it ensures that all related records
+in child tables are automatically deleted when the parent table is deleted.
