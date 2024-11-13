@@ -1,0 +1,16 @@
+ALTER TABLE MANGA 
+ADD manga_author VARCHAR2(50);
+
+ALTER TABLE MANGA_STORE 
+ADD store_rating NUMBER;
+
+ALTER TABLE MANGA 
+ADD CONSTRAINT unique_manga_name 
+UNIQUE (manga_name);
+
+
+#REFLECTION:
+Unique constraint ensures that all values in a column or a set of columns are 
+distinct from each other, preventing duplicate entries.
+The unique constraint significantly enhances the accuracy and usability of your data 
+in several ways
