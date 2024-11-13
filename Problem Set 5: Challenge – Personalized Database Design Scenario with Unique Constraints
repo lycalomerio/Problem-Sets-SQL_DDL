@@ -1,0 +1,24 @@
+CREATE TABLE Customers (
+    customer_id NUMBER PRIMARY KEY,
+    customer_name VARCHAR2(100),
+    email VARCHAR2(100) UNIQUE
+);
+
+
+CREATE TABLE Rentals (
+    rental_id NUMBER PRIMARY KEY,
+    customer_id NUMBER,
+    rental_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES Customers (customer_id)
+);
+
+
+ALTER TABLE Customers 
+ADD phone_no NUMBER;
+
+
+
+#REFLECTION:
+Using unique constraints and foreign keys ensures data accuracy and reliability by
+ preventing duplicates and maintaining valid relationships, making data retrieval and 
+management more efficient and consistent.
