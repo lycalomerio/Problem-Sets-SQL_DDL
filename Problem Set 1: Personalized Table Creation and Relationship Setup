@@ -1,0 +1,45 @@
+CREATE TABLE MANGA (  
+    manga_id NUMBER PRIMARY KEY,  
+    manga_name VARCHAR2(50),  
+    manga_price NUMBER  
+);
+
+
+INSERT INTO MANGA(manga_id, 
+    manga_name, manga_price)  
+VALUES (1, 'Jujutsu Kaisen', 978);
+
+INSERT INTO MANGA(manga_id, 
+    manga_name, manga_price)  
+VALUES (2, 'My Hero Academia', 875);
+
+INSERT INTO MANGA(manga_id, 
+    manga_name, manga_price)  
+VALUES (3, 'One Piece ', 950);
+
+
+CREATE TABLE MANGA_STORE(  
+    store_id NUMBER PRIMARY KEY,  
+    store_name VARCHAR2(50),  
+    manga_id NUMBER,  
+    address VARCHAR2(50),  
+FOREIGN KEY (manga_id)  
+REFERENCES MANGA (manga_id)  
+);
+
+INSERT INTO MANGA_STORE(store_id, 
+    store_name, manga_id, address)  
+VALUES (11, 'Hapi', 1 , 'Daraga');
+
+INSERT INTO MANGA_STORE(store_id, 
+    store_name, manga_id, address)  
+VALUES (22, 'Lucky',2, 'Camalig');
+
+INSERT INTO MANGA_STORE(store_id, 
+    store_name, manga_id, address)  
+VALUES(33,'Tokbon',3,'Tabon Tabon');
+
+
+#REFLECTION:
+Foreign keys and unique constraints are essential tools in relational databases 
+to ensure data integrity and accuracy.
