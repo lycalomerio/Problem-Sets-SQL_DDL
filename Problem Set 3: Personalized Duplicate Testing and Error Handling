@@ -1,0 +1,8 @@
+ORA-00001: unique constraint (SQL_VUDAFZCGJZBKAXTRJSDSBTTTN.SYS_C00172999101) 
+violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+
+#REFLECTION:
+This error means that i trying to insert a value in a column that
+has a unique constraint, and the value i'll trying to insert already exists in
+that column.
